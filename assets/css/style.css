@@ -1610,7 +1610,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #ff7f5d;
+  background: #a5a5a5;
   color: #fff;
   text-decoration: none;
 }
@@ -1807,4 +1807,21 @@ section {
   .design h4{
     font-size: 18px;
   }
+}
+
+/* Contact US */
+
+.text-center button{
+  background-color: #fd3c07;
+  margin-top: 5%;
+  padding: 1% 2%;
+  color: white;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid black;
+  font-weight: 700;
+}
+
+.text-center button:hover{
+  background-color: #dd5c38;
 }

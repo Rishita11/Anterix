@@ -253,3 +253,45 @@
   }
 
 })()
+
+// Contact Us
+
+var firebaseConfig = {
+  apiKey: "AIzaSyBzXFyrD6Nt3Y-UYhwkCOAng0B3jS0_or4",
+  authDomain: "anterix-94fcd.firebaseapp.com",
+  databaseURL: "https://anterix-94fcd-default-rtdb.firebaseio.com",
+  projectId: "anterix-94fcd",
+  storageBucket: "anterix-94fcd.appspot.com",
+  messagingSenderId: "517198412292",
+  appId: "1:517198412292:web:e6cad2ab7e34069037d351",
+  measurementId: "G-ELE7W2SWHG"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+//reference contactInfo collections
+let contactInfo=firebase.database().ref("infos");
+document.querySelector(".contact-form").addEventListener("submit", submitForm);
+
+function submitForm(e){
+  e.preventDefault();
+
+  let name=document.querySelector("#name").value;
+  let email=document.querySelector("#email").value;
+  let subject=document.querySelector("#subject").value;
+  let message=document.querySelector("#message").value;
+  console.log(name, email, subject, message);
+  saveContactInfo(name, email, subject, message);
+}
+
+//Save infos to firebase 
+
+function saveContactInfo(name, email, subject, message){
+  let newContactInfo=contactInfo.push();
+
+  newContactInfo.set({
+    name:name,
+    email:email,
+    subject:subject,
+    message:message,
+  });
+}
