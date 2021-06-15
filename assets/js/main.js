@@ -295,3 +295,9 @@ function saveContactInfo(name, email, subject, message){
     message:message,
   });
 }
+
+//Send function
+
+function send(){
+  document.getElementById('send').style.display = 'flex';
+}
