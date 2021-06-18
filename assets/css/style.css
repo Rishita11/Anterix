@@ -1832,3 +1832,17 @@ section {
   display: none;
 
 }
+
+/* footer */
+
+.college img{
+  width:10% ;
+  height:75%
+}
+
+@media (min-width:320px) and (max-width:599.98px){
+  .college img{
+    width: 30%;
+    height: 75%;
+  }
+}
